@@ -240,9 +240,9 @@
         constructor() {
             this.forms = document.querySelectorAll('form');
             this.patterns = {
-                email: /^[^s@]+@[^s@]+.[^s@]+$/,
-                phone: /^[+-ds()]{10,20}$/,
-                name: /^[a-zA-ZÀ-ÿs-']{2,50}$/,
+                email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                phone: /^[+\-d\s()]{10,20}$/,
+                name: /^[a-zA-ZÀ-ÿ\s-']{2,50}$/,
                 message: /^.{10,}$/
             };
             this.init();
@@ -553,101 +553,3 @@
     }
 
 })();
-# CSS Animations
-
-:root {
-  --header-h: 4.5rem;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-.navbar-collapse {
-  height: calc(100vh - var(--header-h));
-}
-
-@media (max-width: 767px) {
-  :root {
-    --header-h: 4rem;
-  }
-  
-  .navbar-collapse {
-    height: calc(100vh - var(--header-h));
-  }
-}
-
-.c-button,
-.btn {
-  position: relative;
-  overflow: hidden;
-}
-
-.c-card,
-.card {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-img {
-  animation: fadeIn 0.8s ease-out;
-}
-
-.hero,
-.hero-section {
-  animation: fadeIn 1s ease-out;
-}
-
-.nav-link {
-  position: relative;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: var(--color-accent);
-  transition: all 0.3s ease-in-out;
-  transform: translateX(-50%);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 80%;
-}
