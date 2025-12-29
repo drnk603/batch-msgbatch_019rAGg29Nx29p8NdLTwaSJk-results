@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="nl">
- <head>
+<!DOCTYPE html><html lang="nl"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
@@ -11,14 +9,14 @@
   <header class="navbar navbar-expand-md sticky-top bg-white border-bottom" role="banner">
    <div class="container-fluid">
     <!-- Brand -->
-    <a class="navbar-brand d-flex align-items-center" href="/" title="&lt;?php echo BRAND_NAME; ?&gt; - Startseite"> <img src="/assets/images/logo.png" alt="&lt;?php echo BRAND_NAME; ?&gt; Logo" height="40" width="150" loading="eager"> </a> <!-- CTA Button (Mobile) -->
+    <a class="navbar-brand d-flex align-items-center" href="/" title="<?php echo BRAND_NAME; ?> - Startseite"> <img src="/assets/images/logo.png" alt="<?php echo BRAND_NAME; ?> Logo" height="40" width="150" loading="eager"> </a> <!-- CTA Button (Mobile) -->
     <a href="#kontakt" class="btn btn-primary d-md-none me-2">Jetzt buchen</a> <!-- Burger Menu -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten"><span class="navbar-toggler-icon"></span></button>
     <!-- Navigation -->
     <div class="collapse navbar-collapse" id="navbarNav">
      <nav class="navbar-nav mx-auto" role="navigation" aria-label="Hauptnavigation">
       <!--?php foreach ($NAVIGATION as $navItem): ?-->
-      <a class="nav-link" href="&lt;?php echo $navItem['url']; ?&gt;" <?php echo $navitem[_url_]="==" _ ? _aria-current="page" : _;> title="<!--?php echo $navItem['label']; ?-->"&gt; <!--?php echo $navItem['label']; ?--> </a> <!--?php endforeach; ?-->
+      <a class="nav-link" href="<?php echo $navItem['url']; ?>" <?php="" echo="" $navitem[_url_]="==" _="" ?="" _aria-current="page" :="" _;=""> title="<!--?php echo $navItem['label']; ?-->"&gt; <!--?php echo $navItem['label']; ?--> </a> <!--?php endforeach; ?-->
      </nav>
      <!-- CTA Button (Desktop) -->
      <a href="#kontakt" class="btn btn-primary d-none d-md-block">Jetzt buchen</a>
@@ -51,6 +49,6 @@
   <footer class="d-flex align-items-center">
    <strong class="me-2"><!--?php echo htmlspecialchars($testimonial['name']); ?--></strong> <small class="text-muted">aus <!--?php echo htmlspecialchars($testimonial['location']); ?--></small>
   </footer>
-  <script src="script.js" defer></script>
- </body>
-</html>
+  <script src="script.js" defer=""></script>
+ 
+</body></html>
